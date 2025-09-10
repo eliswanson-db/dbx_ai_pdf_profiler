@@ -1,0 +1,19 @@
+[project]
+name = "dbx-ai-pdf-profiler"
+version = "0.1.0"
+description = "a set of tooling to consume and modify pdfs"
+authors = [
+    {name = "Brennan Beal",email = "brennan.beal@databricks.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12,<3.13.dev0"
+dependencies = [
+    "dbutils (>=3.1.2,<4.0.0)",
+    "databricks-connect (>=17.1.2,<18.0.0)",
+    "databricks-sdk (>=0.65.0,<0.66.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
