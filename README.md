@@ -114,25 +114,32 @@ When selecting a PDF processing library for this Databricks project, consider th
   - Steep learning curve
 - **Use Case**: For generating your PDF profiling reports
 
-### Recommendation for This Project
+## License Compatibility Analysis
 
-**Primary Choice**: **PyMuPDF (fitz)** - Best balance of performance, features, and reliability for PDF profiling
-**Secondary Choice**: **PyPDF** - For simple page counting and basic operations
-**Report Generation**: **ReportLab** - For creating detailed profiling reports
+**COPYLEFT LICENSE WARNING**: 
+- **PyMuPDF (fitz)** uses **AGPL v3** (copyleft) - Requires commercial license for proprietary use
+- **Camelot** and **Tabula-py** licenses need verification
 
-### Installation Commands
+**SAFE OPTIONS (Permissive Licenses)**:
+- **PyPDF/PyPDF2**: BSD License ✅
+- **pdfplumber**: MIT License ✅  
+- **pdfminer.six**: MIT License ✅
+- **pdfrw**: MIT License ✅
+- **ReportLab**: BSD License (open source version) ✅
+
+### Revised Recommendation for This Project (License-Safe)
+
+**Primary Choice**: **pdfplumber** - MIT licensed, excellent for PDF analysis and profiling
+**Secondary Choice**: **PyPDF** - BSD licensed, perfect for basic page counting and splitting
+**Report Generation**: **ReportLab** - BSD licensed open source version for generating reports
+**Advanced Text**: **pdfminer.six** - MIT licensed for robust text extraction
+
+**Avoid**: PyMuPDF (fitz) unless you can obtain a commercial license
+
+### Installation Commands (License-Safe)
 
 ```bash
-# Primary recommendation
-pip install PyMuPDF
-
-# Alternative options
-pip install PyPDF2
+# License-safe primary recommendations
 pip install pdfplumber
-pip install pdfminer.six
-pip install reportlab
-
-# For table extraction (if needed)
-pip install camelot-py[cv]
-pip install tabula-py
+pip install PyPDF4
 ```
